@@ -1,18 +1,17 @@
-#Install MSQL
-#pip install mysql
-#pip install mysqlconnector-python  
-
 import mysql.connector
 
-dataBase=mysql.connector.connect(
+# Establish the connection to MySQL server
+dataBase = mysql.connector.connect(
     host='localhost',
     user='root',
-    passwd='T1ger@2025'
+    passwd='your-password'  # Use your actual password
 )
 
-#prepare a cursor object
-cursorObject=dataBase.cursor()
-#create a database
+# Create a cursor object using the connection
+cursorObject = dataBase.cursor()
+
+# Create a new database called 'Suveer'
 cursorObject.execute("CREATE DATABASE Suveer")
 
+# Print success message
 print("All Done!")
